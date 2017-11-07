@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS - quadratic</title>
+</head>
+<body>
+    <body>
+    	<script>
+            function quadratic(a, b, c) {
+                var result = [];
+                var d = Math.sqrt(b*b - 4*a*c); 
+                if(d >= 0){
+                    var x1 = (-1)*d/(2*a);
+                    result.push(x1);
+                    var x2 = d/(2*a);
+                    result.push(x2);
+                }
+                else{
+                    result.push('Немає розвязків');
+                }
+                return result;
+            }
+
+    		a = prompt('a*x2+bx+с: Введіть коефіцієнт a');
+    		b = prompt('a*x2+bx+с: Введіть коефіцієнт b');
+    		c = prompt('a*x2+bx+с: Введіть коефіцієнт c');
+            
+            result = quadratic(a, b, c);
+            
+            text = '';
+            for (i = 0; i < result.length; i++) { 
+                text += result[i].toString() + '<br>';
+            }
+            
+            document.write(text);
+    	</script>
+</body>
+</body>
+</html>
